@@ -40,8 +40,7 @@ public class LoginServlet extends HttpServlet {
        
        if (user == null) {
            request.setAttribute("message", "WRONG!");
-           getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-           
+           getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);  
        }
        
        HttpSession session = request.getSession();
