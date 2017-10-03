@@ -39,7 +39,9 @@ public class LoginServlet extends HttpServlet {
        User user = service.login(username, password);
        
        if (user == null) {
-           request.setAttribute("message", "Invalid Login");
+           request.setAttribute("message", "WRONG!");
+           getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+           
        }
        
        HttpSession session = request.getSession();
